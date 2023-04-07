@@ -40,7 +40,8 @@ function handlePizza(event) {
   const userPizza = new Pizza(toppingsArray, sizeSelection);
   console.log(userPizza);
   const pizzaCost = userPizza.cost();
-  console.log(pizzaCost);
+  const price = document.getElementById("price");
+  price.innerText = `$ ${pizzaCost}`;
 }
 
 window.addEventListener("load", function() {
