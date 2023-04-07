@@ -8,7 +8,9 @@ function Pizza(toppings, size) {
 Pizza.prototype.cost = function() {
   let toppingsPrice = this.toppings.length;
   let sizePrice;
-  if (this.size === "medium") {
+  if (this.size === "small") {
+    sizePrice = 0;
+  } else if (this.size === "medium") {
     sizePrice = 2;
   } else if (this.size === "large") {
     sizePrice = 4;
@@ -28,9 +30,17 @@ const myPizza = new Pizza(["pepperoni", "pineapple"], "large");
 
 function handlePizza(event) {
   event.preventDefault();
+  var toppingsArray = [];
+  const toppingsSelection = document.querySelectorAll('input[type=checkbox]:checked');
+  for (var i = 0; i < toppingsSelection.length; i++) {
+    toppingsArray.push(toppingsSelection[i].value)
+  };
+
   const sizeSelection = document.querySelector("select#size").value;
-  const toppingsSelection = document.querySelector("input[name='topping']:checked").value;
-  
+  const userPizza = new Pizza(toppingsArray, sizeSelection);
+  console.log(userPizza);
+  const pizzaCost = userPizza.cost();
+  console.log(pizzaCost);
 }
 
 window.addEventListener("load", function() {
