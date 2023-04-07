@@ -22,3 +22,17 @@ Pizza.prototype.cost = function() {
 //////
 const myPizza = new Pizza(["pepperoni", "pineapple"], "large");
 //////
+
+
+// UI Logic
+
+function handlePizza(event) {
+  event.preventDefault();
+  const sizeSelection = document.querySelector("select#size").value;
+  const toppingsSelection = document.querySelector("input[name='topping']:checked").value;
+  
+}
+
+window.addEventListener("load", function() {
+  document.getElementById("pizza-selection").addEventListener("submit", handlePizza);
+});
