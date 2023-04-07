@@ -1,3 +1,40 @@
+# Pizza Parlor
+
+#### By Kyle Crawford
+
+#### A website for a pizza company where a user can choose one or more individual toppings, a size to order a pizza, and see the final cost.
+
+## Technologies Used
+
+* HTML
+* CSS
+* Javascript
+* Git
+
+## Description
+
+This website allows users to choose from a variety of toppings to add to their pizza as well as choose their pie size. Once selected, it will show them the total price. It also allows to pick multiple pizzas.
+
+## Setup/Installation Requirements
+
+* Clone this repository to your desktop
+* Navigate to the top level of the directory.
+* Open index.html in your browser.
+
+## Known Bugs
+
+* None to my knowledge.
+
+## License
+
+[MIT](https://opensource.org/license/mit/)
+
+Copyright (c) 2023 Kyle Crawford
+
+////////////////
+
+TDD
+
 Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"

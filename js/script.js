@@ -25,6 +25,7 @@ Order.prototype.findPizza = function(id) {
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
+  this.price = price;
 }
 
 Pizza.prototype.cost = function() {
@@ -39,14 +40,13 @@ Pizza.prototype.cost = function() {
   } else if (this.size === "x-large") {
     sizePrice = 6;
   }
-  return 10 + toppingsPrice + sizePrice;
+  this.price = 10 + toppingsPrice + sizePrice;
 }
 
 
 // UI Logic
 
 let order = new Order();
-let tastyPizza = new Pizza(["pepperoni", "broccoli", "large"])
 const ul = document.createElement("ul");
 const li = document.createElement("li");
 
@@ -80,6 +80,12 @@ function listPrices(priceToDisplay){
   priceDiv.append(ul);
 }
 
+// const totalPrice = 0;
+// Object.keys(totalPrice.pizzas).forEach(function(key) {
+//   totalPrice += findPizza(key);
+//   price.innerText = totalPrice
+// });
+
 function handlePizza(event) {
   event.preventDefault();
   var toppingsArray = [];
@@ -92,11 +98,12 @@ function handlePizza(event) {
   const userPizza = new Pizza(toppingsArray, sizeSelection);
   const pizzaCost = userPizza.cost();
   const price = document.getElementById("price");
+
  
 
   if (toppingsArray.indexOf("pineapple") === -1) {
     order.addPizza(userPizza);
-    price.innerText = `$ ${pizzaCost} for your ${userPizza.size} pie with ${userPizza.toppings.join(" & ")} toppings. Yum!`;
+    price.innerText = `$ ${userPizza.price} for your ${userPizza.size} pie with ${userPizza.toppings.join(" & ")} toppings. Yum!`;
   } else {
     price.innerText = "Sorry, pineapple doesn't belong on pizza."
   }
@@ -105,4 +112,5 @@ function handlePizza(event) {
 
 window.addEventListener("load", function() {
   document.getElementById("pizza-selection").addEventListener("submit", handlePizza);
+  document.querySelector("div#pizzas-div").addEventListener("click", displayPizzaDetails);
 });
