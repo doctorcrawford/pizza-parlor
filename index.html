@@ -9,40 +9,47 @@
   <title>Pepe's Pizza Parlor</title>
 </head>
 <body>
-  <div id="header">
-    <h1>Pepe's Pizza Parlor</h1>
-    <h4>Thin crust is the best crust.</h4>
-  </div>
-  <div class="container">
-    <div id="form-div" class="item">
-      <form id="pizza-selection">
-        <p>Please select your toppings:</p>
-        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-        <label for="pepperoni">Pepperoni</label><br>
-        <input type="checkbox" id="Broccoli" name="topping" value="broccoli">
-        <label for="broccoli">Broccoli</label><br>
-        <input type="checkbox" id="extra-cheese" name="topping" value="extra cheese">
-        <label for="extra-cheese">Extra Cheese</label><br>
-        <input type="checkbox" id="pineapple" name="topping" value="pineapple">
-        <label for="pineapple">Pineapple</label><br>
-        <p>Please select the size of your pie:</p>
-        <select id="size">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-          <option value="x-large">X-Large</option>
-        </select>
-        <br>
-        <br>
-        <br>
-        <button type="submit">Submit Selection</button>
-      </form>
+  <header class="zoom-me">
+    <img src="https://unsplash.it/1200/800?image=838">
+  </header>
+  <main role="main">
+  <div class="contained">
+    <div id="header">
+      <h1>Pepe's Pizza Parlor</h1>
+      <h4>Thin crust is the best crust.</h4>
     </div>
+    <div class="container">
+      <div id="form-div" class="item">
+        <form id="pizza-selection">
+          <p>Please select your toppings:</p>
+          <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+          <label for="pepperoni">Pepperoni</label><br>
+          <input type="checkbox" id="broccoli" name="topping" value="broccoli">
+          <label for="broccoli">Broccoli</label><br>
+          <input type="checkbox" id="extra-cheese" name="topping" value="extra cheese">
+          <label for="extra-cheese">Extra Cheese</label><br>
+          <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+          <label for="pineapple">Pineapple</label><br>
+          <p>Please select the size of your pie:</p>
+          <select id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="x-large">X-Large</option>
+          </select>
+          <br>
+          <br>
+          <br>
+          <button type="submit">Submit Selection</button>
+        </form>
+      </div>
 
-    <div id="price-div" class="item">
-      <h4>Pepe's Cut:</h4>
-      <p class="hidden" id="price"></p>
+      <div id="price-div" class="item">
+        <h4>Pepe's Cut:</h4>
+        <p class="hidden" id="price"></p>
+      </div>
     </div>
   </div>
+</main>
 </body>
 </html>
