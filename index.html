@@ -14,35 +14,37 @@
       <h1>Pepe's Pizza Parlor</h1>
       <h4>Thin crust is the best crust.</h4>
     </div>
-    <!-- <div>
-      <img src="img/pizza-oven.jpeg" alt="pizza-oven">
-    </div> -->
     <div class="container">
-      <div id="form-div" class="item">
-        <form id="pizza-selection">
-          <p>Please select your toppings:</p>
-          <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
-          <label for="pepperoni">Pepperoni</label><br>
-          <input type="checkbox" id="broccoli" name="topping" value="broccoli">
-          <label for="broccoli">Broccoli</label><br>
-          <input type="checkbox" id="extra-cheese" name="topping" value="extra cheese">
-          <label for="extra-cheese">Extra Cheese</label><br>
-          <input type="checkbox" id="pineapple" name="topping" value="pineapple">
-          <label for="pineapple">Pineapple</label><br>
-          <p>Please select the size of your pie:</p>
-          <select id="size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="x-large">X-Large</option>
-          </select>
-          <br>
-          <br>
-          <br>
-          <button type="submit">Submit Selection</button>
-        </form>
+      <div id="selection-div">
+        <div id="form-div" class="item">
+          <form id="pizza-selection">
+            <p>Please select your toppings:</p>
+            <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label><br>
+            <input type="checkbox" id="broccoli" name="topping" value="broccoli">
+            <label for="broccoli">Broccoli</label><br>
+            <input type="checkbox" id="extra-cheese" name="topping" value="extra cheese">
+            <label for="extra-cheese">Extra Cheese</label><br>
+            <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+            <label for="pineapple">Pineapple</label><br>
+            <p>Please select the size of your pie:</p>
+            <select id="size">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="x-large">X-Large</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <button type="submit">Submit Selection</button>
+          </form>
+        </div>
+        <div id="order-div">
+          <h4>Your Order:</h4>
+          <div id="pizzas-div"></div>
+        </div>
       </div>
-
       <div id="price-div" class="item">
         <h4>Pepe's Cut:</h4>
         <p class="hidden" id="price">Awaiting your tasty selection</p>

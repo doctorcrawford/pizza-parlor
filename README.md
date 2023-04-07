@@ -4,10 +4,8 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const myPizza = new Pizza(["pepperoni", "pineapple"], "large");
 Expected Output: Pizza { toppings: ["pepperoni", "pineapple"], size: "large" }
 
-Test: "It should
-Code: 
-Expected Output: 
 
+////
 
 Describe: Cost()
 
@@ -23,6 +21,38 @@ Test: "It should increase the price of the pizza for bigger pies"
 Code: myPizza.cost();
 Expected Output: 16
 
-Test: "It should
-Code: myPizza.cost();
-Expected Output: 
+
+////
+
+Describe: Order()
+
+Test: "It should create an instance of an Order object type"
+Code: let order = new Order();
+Expected Output: Order {pizzas: {…}}
+
+
+////
+
+Describe: AddPizza()
+
+Test: "It should add a pizza to an order"
+Code: order.addPizza(userPizza);
+Expected Output: Order {pizzas: {1: Pizza}}
+
+
+////
+
+Describe: assignID()
+
+Test: "It should add a unique ID to each pizza added to the order"
+Code: order.addPizza(userPizza);
+Expected Output:Order {pizzas: {1: Pizza}, currentId: 1}
+
+
+////
+
+Describe: findPizza()
+
+Test: "It should find the pizza added to the order by unique ID"
+Code: order.findPizza(1);
+Expected Output:Order Pizza {toppings: Array(3), size: "large", id: 1}
