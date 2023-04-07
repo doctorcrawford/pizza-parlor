@@ -6,9 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/script.js"></script>
-  <title>Pizza Parlor</title>
+  <title>Pepe's Pizza Parlor</title>
 </head>
 <body>
-  
+  <h1>Pepe's Pizza Parlor</h1>
+  <h3>Thin crust is the best crust.</h3>
+
+  <div id="formDiv">
+    <form id="pizzaSelection">
+      <select id="size">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="x-large">X-Large</option>
+      </select>
+      <br>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" id="Broccoli" name="topping" value="broccoli">
+      <label for="broccoli">Broccoli</label><br>
+      <input type="checkbox" id="extraCheese" name="topping" value="extraCheese">
+      <label for="extraCheese">Extra Cheese</label><br>
+      <input type="checkbox" id="pineapple" name="topping" value="pineapple">
+      <label for="pineapple">Pineapple</label><br>
+      <br>
+      <button type="submit">Submit Selection</button>
+    </form>
+  </div>
 </body>
 </html>

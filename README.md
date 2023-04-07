@@ -8,9 +8,6 @@ Test: "It should
 Code: 
 Expected Output: 
 
-Test: "It should
-Code: 
-Expected Output: 
 
 Describe: Cost()
 
@@ -22,9 +19,9 @@ Test: "It should add the price of the pizza by 1 for each topping"
 Code: myPizza.cost();
 Expected Output: 12
 
-Test: "It should
+Test: "It should increase the price of the pizza for bigger pies"
 Code: myPizza.cost();
-Expected Output: 
+Expected Output: 16
 
 Test: "It should
 Code: myPizza.cost();
