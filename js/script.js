@@ -41,7 +41,7 @@ function handlePizza(event) {
   console.log(userPizza);
   const pizzaCost = userPizza.cost();
   const price = document.getElementById("price");
-  price.innerText = `$ ${pizzaCost}`;
+  price.innerText = `$ ${pizzaCost} for your ${userPizza.size} pie with ${userPizza.toppings.join(" & ")} toppings.`;
 }
 
 window.addEventListener("load", function() {

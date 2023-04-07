@@ -1,0 +1,27 @@
+.container{
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px;
+}
+
+
+
+#form-div{
+  order: 0;
+  flex: 100;
+  /* flex-grow: 8;
+  flex-basis: auto; */
+  width: auto;
+}
+
+#pricediv{
+  order: 1;
+  flex: 6;
+  /* flex-grow: 1;
+  flex-basis: content; */
+  /* width: auto; */
+  /* flex-shrink: 3; */
+}
