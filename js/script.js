@@ -60,25 +60,24 @@ function listPizzas(pizzaOrderToDisplay){
     li.append(`Pizza numero ${pizza.id}`);
     li.setAttribute("id", pizza.id);
     ul.append(li);
-    console.log(pizza);
   });
   orderDiv.append(ul);
 }
 
-function listPrices(priceToDisplay){
-  let priceDiv = document.querySelector("div#price-div");
-  priceDiv.innerText = null;
-  const ul = document.createElement("ul");
-  Object.keys(priceToDisplay.pizzas).forEach(function(key) {
-    const pizza = priceToDisplay.findPizza(key);
-    const li = document.createElement("li");
-    li.append(`Pizza numero ${pizza.id}`);
-    li.setAttribute("id", pizza.id);
-    ul.append(li);
-    console.log(pizza);
-  });
-  priceDiv.append(ul);
-}
+// function listPrices(priceToDisplay){
+//   let priceDiv = document.querySelector("div#price-div");
+//   priceDiv.innerText = null;
+//   const ul = document.createElement("ul");
+//   Object.keys(priceToDisplay.pizzas).forEach(function(key) {
+//     const pizza = priceToDisplay.findPizza(key);
+//     const li = document.createElement("li");
+//     li.append(`Pizza numero ${pizza.id}`);
+//     li.setAttribute("id", pizza.id);
+//     ul.append(li);
+//     console.log(pizza);
+//   });
+//   priceDiv.append(ul);
+// }
 
 // const totalPrice = 0;
 // Object.keys(totalPrice.pizzas).forEach(function(key) {
@@ -104,13 +103,17 @@ function handlePizza(event) {
   if (toppingsArray.indexOf("pineapple") === -1) {
     order.addPizza(userPizza);
     price.innerText = `$ ${userPizza.price} for your ${userPizza.size} pie with ${userPizza.toppings.join(" & ")} toppings. Yum!`;
+    // li.append(`Pizza numero ${pizza.id}`);
+    // li.setAttribute("id", pizza.id);
+    // ul.append(li);
   } else {
     price.innerText = "Sorry, pineapple doesn't belong on pizza."
   }
+  // price.append(ul);
   listPizzas(order);
 }
 
 window.addEventListener("load", function() {
   document.getElementById("pizza-selection").addEventListener("submit", handlePizza);
-  document.querySelector("div#pizzas-div").addEventListener("click", displayPizzaDetails);
+  // document.querySelector("div#pizzas-div").addEventListener("click", displayPizzaDetails);
 });
